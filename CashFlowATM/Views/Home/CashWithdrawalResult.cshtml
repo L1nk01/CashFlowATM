@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Resultado";
+}
+
+<div class="d-flex flex-column gap-2">
+    <h1>@ViewData["Title"]</h1>
+    <h3>@ViewData["DispensationResult"]</h3>
+    <h3>Total: @ViewData["Total"]$</h3>
+    <a class="btn btn-primary w-100" asp-area="" asp-controller="Home" asp-action="Index">Volver a la pantalla de inicio</a>
+</div>

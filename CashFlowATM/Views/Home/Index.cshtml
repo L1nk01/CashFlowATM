@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Selección de modo";
+}
+
+<div>
+    <h1 class="mb-3">Cajero Automático</h1>
+
+    <form method="post" asp-controller="Home" asp-action="SelectDispensationMode" class="d-flex flex-column gap-4">
+        <div>
+            <label for="dispensation-mode">Modo de dispensación</label>
+            <select id="dispensation-mode" name="dispensationMode" class="form-select">
+                <option value="1">Billetes de 200 y 1000</option>
+                <option value="2">Billetes de 100 y 500</option>
+                <option value="3" selected>Modo eficiente (Todas las denominaciones)</option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary w-100">Seleccionar modo</button>
+    </form>
+</div>

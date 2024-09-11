@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Retiro de Efectivo";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>@ViewData["ModeText"]</h4>
+    <form method="post" asp-controller="Home" asp-action="WithdrawCash" class="d-flex flex-column gap-3">
+        <input type="hidden" name="dispensationMode" value="@ViewData["Mode"]" />
+        <label for="cash">Ingrese la cantidad a retirar</label>
+        <input type="text" id="cash" name="cash" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required />
+
+        <div class="d-flex flex-column gap-2">
+            <button class="btn btn-primary w-100">Retirar efectivo</button>
+            <button class="btn btn-secondary w-100" onclick="window.history.back();">Volver</button>
+        </div>
+    </form>
+</div>
